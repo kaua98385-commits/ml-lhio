@@ -1,0 +1,23 @@
+{
+  "name": "meridiano",
+  "version": "0.8.0",
+  "description": "MERIDIANO (nome provisório) — simulador político e geopolítico. Etapas 1-3: fundação, mapa geográfico e sistema territorial.",
+  "type": "module",
+  "private": true,
+  "license": "UNLICENSED",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "start": "node tools/serve.mjs",
+    "data": "node tools/fetch-geodata.mjs && node tools/build-geodata.mjs",
+    "data:fetch": "node tools/fetch-geodata.mjs",
+    "data:build": "node tools/build-geodata.mjs",
+    "test": "node --test \"tests/unit/*.test.js\"",
+    "test:ui": "node tests/ui/ui-smoke.mjs",
+    "test:auth-ui": "node tests/ui/auth-e2e.mjs",
+    "test:character-ui": "node tests/ui/character-e2e.mjs",
+    "auth:config": "node tools/write-config.mjs",
+    "auth:check": "node tools/check-auth-config.mjs"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
